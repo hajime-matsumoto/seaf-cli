@@ -20,6 +20,10 @@ use Seaf\FrameWork as FW;
  */
 class Request extends FW\Component\Request
 {
+    public function init( )
+    {
+        $this->setUri(Seaf::util()->arrayGet($GLOBALS['argv'],1,'/'));
+    }
 }
 
 /* vim: set expandtab ts=4 sw=4 sts=4: et*/
